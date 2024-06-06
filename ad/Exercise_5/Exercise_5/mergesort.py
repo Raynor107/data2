@@ -88,12 +88,15 @@ def merge(data, left, right):
 import matplotlib.pyplot as plt
 
 def plot_data(data, title):
-    #plot figure
+    #plot 
     plt.figure()
-    plt.plot(range(len(data)), data)
+    plt.scatter(range(len(data)), data)
+    for i, value in enumerate(data):
+        plt.text(i, value, str(value), fontsize=9, ha='right')
     plt.title(title)
     plt.xlabel('index')
-    plt.ylabel('Value')
+    plt.ylabel('value')
+    plt.grid(True)
     plt.show()
 
 # data test
